@@ -867,6 +867,7 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id tv_weather_data
 id unchecked
 id uniform
 id up
