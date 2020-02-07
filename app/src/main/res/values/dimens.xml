@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="searchMargin">16dp</dimen>
+    <dimen name="cardMargin">16dp</dimen>
+    <dimen name="weather">80sp</dimen>
+</resources>

@@ -110,6 +110,28 @@
     <string name="condition_962">Hurricane</string>
 
     <string name="condition_unknown">Unknown (<xliff:g id="conditionId">%1$d</xliff:g>)</string>
+    <string name="search">Search location</string>
+    <string name="_35_xb0">35°</string>
+    <string name="description">description</string>
+    <string name="humidity">Humidity</string>
+    <string name="_30_xb0">30°</string>
+    <string name="next_7_days">Next 7 days</string>
+    <string name="monday">Monday</string>
+    <string name="icon">icon</string>
+    <string name="_40_xb0">40°</string>
+    <string name="thirty">30%</string>
+    <string name="wind_direction">Wind-Direction</string>
+    <string name="cloud_cover">cloud-cover</string>
+    <string name="visibility">visibility</string>
+    <string name="wind_speed">Wind-Speed</string>
+    <string name="humidity1">humidity</string>
+    <string name="ibadan">Ibadan</string>
+    <string name="detailweather">detailWeather</string>
+    <string name="cancel">cancel</string>
+    <string name="min_temp">min_Temp</string>
+    <string name="max_temp">max_temp</string>
+    <string name="time">14:00</string>
+    <string name="content">content</string>
 
 
     <!-- - - - - - - - - - - -->
