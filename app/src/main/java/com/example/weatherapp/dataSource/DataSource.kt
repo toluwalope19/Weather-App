@@ -1,15 +1,15 @@
 package com.example.weatherapp.dataSource
 
 import androidx.lifecycle.LiveData
-import com.example.weatherapp.model.WeatherResponse
+import com.example.weatherapp.model.Weather
 
 interface DataSource {
 
-    fun getWeather(): LiveData<WeatherResponse>
+    fun getWeather(): LiveData<Weather>
 
     fun refreshWeather()
 
-    fun saveWeather(weatherResponse: WeatherResponse)
+    fun saveWeather(weather: Weather)
 
     fun clearWeather()
 

@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.weatherapp.viewmodel.MainViewModel
 import com.example.weatherapp.R
+import com.example.weatherapp.repository.WeatherRepository
+import com.example.weatherapp.viewmodel.WeatherViewModelFactory
 
 
 class MainFragment : Fragment() {
@@ -17,6 +19,8 @@ class MainFragment : Fragment() {
     }
 
     private lateinit var viewModel: MainViewModel
+    private lateinit var repository: WeatherRepository
+    lateinit var factory: WeatherViewModelFactory
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

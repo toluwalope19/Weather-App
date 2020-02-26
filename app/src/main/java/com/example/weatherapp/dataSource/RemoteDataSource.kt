@@ -3,6 +3,7 @@ package com.example.weatherapp.dataSource
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.weatherapp.model.Weather
 import com.example.weatherapp.model.WeatherResponse
 import com.example.weatherapp.network.ApixuApi
 import com.example.weatherapp.util.NetworkState
@@ -15,12 +16,14 @@ class RemoteDataSource(private val api: ApixuApi, private val compositeDisposabl
     val networkState: LiveData<NetworkState>
     get() = _networkState
 
-    private val _apiResponse = MutableLiveData<WeatherResponse>()
+    private val _apiResponse = MutableLiveData<Weather>()
     val apiResponse
     get() = _apiResponse
 
-    override fun getWeather(): LiveData<WeatherResponse> {
+    override fun getWeather(): LiveData<Weather> {
         _networkState.postValue(NetworkState.LOADING)
+
+
 
         try {
             compositeDisposable.add(
@@ -28,7 +31,7 @@ class RemoteDataSource(private val api: ApixuApi, private val compositeDisposabl
                     .subscribeOn(Schedulers.io())
                     .subscribe(
                         {
-                            _apiResponse.postValue(it)
+                            _apiResponse.value
                             _networkState.postValue(NetworkState.LOADED)
                         },
                         {
@@ -49,7 +52,7 @@ class RemoteDataSource(private val api: ApixuApi, private val compositeDisposabl
 
     }
 
-    override fun saveWeather(weatherResponse: WeatherResponse) {
+    override fun saveWeather(weather: Weather) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
